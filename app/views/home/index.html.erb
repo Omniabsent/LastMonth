@@ -1,2 +1,10 @@
-<h1>LastMonth Chart Generator</h1>
-<%=@response%> 
+<center>
+    <h1>LastMonth Chart Generator</h1>
+    <% hash = JSON.parse @response.env.response_body %>
+    <% for i in 1..25 do %>
+        <img src="<%= hash["topalbums"]["album"][i]["image"][2]["#text"] %>">
+        <% if i%5 == 0 %>
+            <br>
+        <% end %>
+    <% end %>
+</center>
