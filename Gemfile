@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'faraday'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1", ">= 7.2.1.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -35,6 +36,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'pry', '~> 0.14.2'
+  
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
